@@ -4,7 +4,7 @@ import axios from 'axios';
 export const fetchWeather = createAsyncThunk(
   'weather/fetchWeather',
   async (location) => {
-    const apiKey = '7986d10ee68c4a1617b51e42f211bacd';
+    const apiKey = '{Your API Key}';
     const response = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`
     );
@@ -17,7 +17,7 @@ export const fetchWeather = createAsyncThunk(
 export const fetchForecast = createAsyncThunk(
   'weather/fetchForecast',
   async (location) => {
-    const apiKey = '7986d10ee68c4a1617b51e42f211bacd';
+    const apiKey = '{Your API Key}';
     const response = await axios.get(
       `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=${apiKey}`
     );
